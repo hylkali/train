@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>승객 안전관리 매뉴얼</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="paper">
+    <header class="masthead">
+      <div>
+        <div class="org">철도안전관리부</div>
+        <h1>승객 안전관리 매뉴얼</h1>
+      </div>
+      <div class="status">
+        <span>문서번호 <b>PS-0714</b></span>
+        <span>문서 버전 <b id="version">1.0</b></span>
+      </div>
+    </header>
+
+    <div class="meta">
+      <span>시행일자 : 20XX. 07. 14.</span>
+      <span id="modified">최종 수정 : 20XX. 07. 14.</span>
+      <span>열람 상태 : <b id="readerState">정상</b></span>
+    </div>
+
+    <section class="notice">
+      <p>본 문서는 승객의 안전을 위해 열차 탑승 전 반드시 숙지하여야 하는 사항을 규정합니다.</p>
+      <p>각 항목을 순서대로 읽고, 모든 수칙을 숙지한 후 열차를 이용하시기 바랍니다.</p>
+    </section>
+
+    <div id="warning" class="warning hidden"></div>
+    <main id="rules"></main>
+
+    <section class="search-panel">
+      <h2>문서 내 검색</h2>
+      <div class="search-row">
+        <input id="searchInput" type="text" placeholder="검색어를 입력하십시오.">
+        <button id="searchBtn">검색</button>
+      </div>
+      <div id="searchResults" class="search-results"></div>
+    </section>
+
+    <section class="document-footer">
+      <button id="docInfo">문서 정보</button>
+      <span>본 문서는 무단 복제 및 수정이 금지되어 있습니다.</span>
+      <span id="timer">문서 열람 시간 00:00</span>
+    </section>
+
+    <div id="secret" class="secret hidden">
+      <div class="secret-box">
+        <div class="secret-label">비공개 문서</div>
+        <h2>승객용 매뉴얼 원본</h2>
+        <p>이 문서는 일반 승객에게 공개되지 않습니다.</p>
+        <p class="secret-text">규칙은 승객을 보호하기 위해 만들어진 것이 아닙니다.</p>
+        <p class="secret-text">규칙을 읽을 수 있는 사람에게만 적용됩니다.</p>
+        <button id="closeSecret">문서 닫기</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
