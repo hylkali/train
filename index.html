@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>승객 안전관리 매뉴얼 · PS-0714 / V6</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="paper">
+  <header class="masthead">
+    <div>
+      <div class="org clickable" id="orgMark" title="클릭하여 기록 확인">철도안전관리부</div>
+      <h1 id="docTitle">승객 안전관리 매뉴얼</h1>
+    </div>
+    <div class="status">
+      <span>문서번호 <b id="docNumber" class="clickable">PS-0714</b></span>
+      <span>문서 버전 <b id="version">1.0</b></span>
+    </div>
+  </header>
+
+  <div class="meta">
+    <span id="effectiveDate">시행일자 : 20XX. 07. 14.</span>
+    <span id="modified">최종 수정 : 20XX. 07. 14.</span>
+    <span>열람 상태 : <b id="readerState">정상</b></span>
+  </div>
+
+  <section class="notice" id="notice">
+    <p>본 문서는 승객의 안전을 위해 열차 탑승 전 반드시 숙지하여야 하는 사항을 규정합니다.</p>
+    <p>각 항목을 순서대로 읽고, 모든 수칙을 숙지한 후 열차를 이용하시기 바랍니다.</p>
+  </section>
+
+  <div id="warning" class="warning hidden"></div>
+  <div id="readingNote" class="reading-note hidden"></div>
+  <main id="rules"></main>
+
+  <section class="search-panel">
+    <h2>문서 내 검색</h2>
+    <div class="search-row">
+      <input id="searchInput" type="text" autocomplete="off" placeholder="검색어를 입력하십시오.">
+      <button id="searchBtn">검색</button>
+    </div>
+    <div id="searchResults" class="search-results"></div>
+  </section>
+
+  <section class="document-footer">
+    <button id="docInfo">문서 정보</button>
+    <button id="historyBtn">열람 기록</button>
+    <button id="resetBtn">문서 기록 초기화</button>
+    <span>본 문서는 무단 복제 및 수정이 금지되어 있습니다.</span>
+    <span id="timer">문서 열람 시간 00:00</span>
+  </section>
+
+  <div class="page-mark">PS-0714 / <span id="pageState">1</span></div>
+
+  <div id="secret" class="secret hidden" role="dialog" aria-modal="true">
+    <div class="secret-box">
+      <div class="secret-label">비공개 문서</div>
+      <h2 id="secretTitle">승객용 매뉴얼 원본</h2>
+      <div id="secretContent"></div>
+      <button id="closeSecret">문서 닫기</button>
+    </div>
+  </div>
+
+  <div id="history" class="secret hidden" role="dialog" aria-modal="true">
+    <div class="secret-box">
+      <div class="secret-label">열람 기록</div>
+      <h2>문서 접근 기록</h2>
+      <div id="historyContent"></div>
+      <button id="closeHistory">닫기</button>
+    </div>
+  </div>
+</div>
+<div id="blackout" class="blackout" role="alert" aria-live="assertive" aria-hidden="true">
+  <span>그들이 보고 있습니다.</span>
+</div>
+<div id="toast" class="toast" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
